@@ -21,7 +21,7 @@ class PhotosViewController: UIViewController, UITableViewDataSource, UITableView
         
         tumblrTableView.delegate = self;
         tumblrTableView.dataSource = self;
-        //tumblrTableView.rowHeight = 350;
+        tumblrTableView.rowHeight = 320;
         
         // Network request
         let url = URL(string: "https://api.tumblr.com/v2/blog/humansofnewyork.tumblr.com/posts/photo?api_key=Q6vHoaVm5L1u2ZAW1fqv3Jw48gFzYVg9P0vH0VHl3GVy6quoGV")!
@@ -59,7 +59,7 @@ class PhotosViewController: UIViewController, UITableViewDataSource, UITableView
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "tumblrPhotoCell", for: indexPath) as! tumblrTableViewCell;
+        let cell = tumblrTableView.dequeueReusableCell(withIdentifier: "tumblrPhotoCell", for: indexPath) as! tumblrTableViewCell;
         
         let post = posts[indexPath.row];  //pull out single post from posts array
         

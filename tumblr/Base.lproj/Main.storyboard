@@ -23,15 +23,15 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tumblrPhotoCell" rowHeight="189" id="7BI-Z4-eF6" customClass="tumblrTableViewCell">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="189"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tumblrPhotoCell" rowHeight="272" id="7BI-Z4-eF6" customClass="tumblrTableViewCell" customModule="tumblr" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="272"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7BI-Z4-eF6" id="CZk-md-Bi0">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="188.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="271.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Iv-17-OUa">
-                                                    <rect key="frame" x="15" y="0.0" width="210" height="179"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="268"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
