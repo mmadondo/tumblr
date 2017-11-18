@@ -21,7 +21,7 @@ class PhotosViewController: UIViewController, UITableViewDataSource, UITableView
         
         tumblrTableView.delegate = self;
         tumblrTableView.dataSource = self;
-        tumblrTableView.rowHeight = 350;
+        //tumblrTableView.rowHeight = 350;
         
         // Network request
         let url = URL(string: "https://api.tumblr.com/v2/blog/humansofnewyork.tumblr.com/posts/photo?api_key=Q6vHoaVm5L1u2ZAW1fqv3Jw48gFzYVg9P0vH0VHl3GVy6quoGV")!
@@ -33,23 +33,24 @@ class PhotosViewController: UIViewController, UITableViewDataSource, UITableView
         let task = session.dataTask(with: url) { (data, response, error) in
             if let error = error {
                 print(error.localizedDescription)
-            } else if let data = data{
-                
-                let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any];
+            } else if let data = data,
+                let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
             
                 // TODO: Get the posts and store in posts property
                 // Get the dictionary from the response key
-                let responseDictionary = dataDictionary["response"] as! [String: Any];
+                let responseDictionary = dataDictionary["response"] as! [String: Any]
                 
                 // Store the returned array of dictionaries in our posts property
-                self.posts = responseDictionary["posts"] as! [[String: Any]];
+                self.posts = responseDictionary["posts"] as! [[String: Any]]
                 
                 // Reload the table view
                 self.tumblrTableView.reloadData();
+            
             }
             
         }
-        task.resume()
+        
+        task.resume();
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -65,6 +66,7 @@ class PhotosViewController: UIViewController, UITableViewDataSource, UITableView
         //get photo dictionary from the post
         
         if let photos = post["photos"] as? [[String: Any]]{
+            
             //to get images url:
             let photo = photos[0]; //1st image in photos array
             
