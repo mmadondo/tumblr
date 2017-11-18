@@ -21,7 +21,7 @@ class PhotosViewController: UIViewController, UITableViewDataSource, UITableView
         
         tumblrTableView.delegate = self;
         tumblrTableView.dataSource = self;
-        tumblrTableView.rowHeight = 320;
+        tumblrTableView.rowHeight = 350;
         
         // Network request
         let url = URL(string: "https://api.tumblr.com/v2/blog/humansofnewyork.tumblr.com/posts/photo?api_key=Q6vHoaVm5L1u2ZAW1fqv3Jw48gFzYVg9P0vH0VHl3GVy6quoGV")!
@@ -94,10 +94,35 @@ class PhotosViewController: UIViewController, UITableViewDataSource, UITableView
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
+ 
+ */
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
+        let vc = segue.destination as! PhotoDetailsViewController
+        
+        let cell = sender as! UITableViewCell
+        
+        if let indexPath = tumblrTableView.indexPath(for: cell){
+            
+            let post = posts[indexPath.row]
+            
+            let photos = post["photos"] as! [[String: Any]]
+            //to get images url:
+            
+            let photo = photos[0]; //1st image in photos array
+            
+            let originalSize = photo["original_size"] as! [String: Any]; //Get the original size dictionary from the photo
+            
+            // Get the url string from the original size dictionary
+            let urlString = originalSize["url"] as! String;
+            
+            // Create a URL using the urlString
+            let url = URL(string: urlString);
+         
+            vc.photoURL = URL(string: urlString)
+        }
         // Pass the selected object to the new view controller.
     }
-    */
+ 
 
 }

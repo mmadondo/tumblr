@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		196900AD1FC0CCA6005B136F /* PhotoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196900AC1FC0CCA6005B136F /* PhotoDetailsViewController.swift */; };
 		19A3BEA11FBFDF00005F5202 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A3BEA01FBFDF00005F5202 /* AppDelegate.swift */; };
 		19A3BEA61FBFDF00005F5202 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19A3BEA41FBFDF00005F5202 /* Main.storyboard */; };
 		19A3BEA81FBFDF00005F5202 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19A3BEA71FBFDF00005F5202 /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		196900AC1FC0CCA6005B136F /* PhotoDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailsViewController.swift; sourceTree = "<group>"; };
 		19A3BE9D1FBFDF00005F5202 /* tumblr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tumblr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19A3BEA01FBFDF00005F5202 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19A3BEA51FBFDF00005F5202 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				19A3BEA91FBFDF00005F5202 /* LaunchScreen.storyboard */,
 				19A3BEAC1FBFDF00005F5202 /* Info.plist */,
 				19A3BED41FBFF0B5005F5202 /* tumblrTableViewCell.swift */,
+				196900AC1FC0CCA6005B136F /* PhotoDetailsViewController.swift */,
 			);
 			path = tumblr;
 			sourceTree = "<group>";
@@ -463,6 +466,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				196900AD1FC0CCA6005B136F /* PhotoDetailsViewController.swift in Sources */,
 				19A3BEA11FBFDF00005F5202 /* AppDelegate.swift in Sources */,
 				19A3BED51FBFF0B5005F5202 /* tumblrTableViewCell.swift in Sources */,
 				19A3BECF1FBFE6E5005F5202 /* PhotosViewController.swift in Sources */,
