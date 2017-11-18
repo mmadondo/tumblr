@@ -7,10 +7,12 @@ target 'tumblr' do
 
   # Pods for tumblr
   # This pulls in the latest version of Alamofire >= 4.4 but less than 5.0.
-  pod 'Alamofire', '~> 4.4'
+  #pod 'Alamofire', '~> 4.5'
+  pod 'AlamofireImage', '~> 3.3'
+
   # Add additional dependencies
-  pod 'OAuthSwift', '~> 1.1.0'
-  pod 'OAuthSwiftAlamofire'
+  #pod 'OAuthSwift', '~> 1.1.0'
+  #pod 'OAuthSwiftAlamofire'
 
   target 'tumblrTests' do
     inherit! :search_paths

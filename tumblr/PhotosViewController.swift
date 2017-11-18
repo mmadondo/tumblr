@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class PhotosViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -20,6 +21,7 @@ class PhotosViewController: UIViewController, UITableViewDataSource, UITableView
         
         tumblrTableView.delegate = self;
         tumblrTableView.dataSource = self;
+        tumblrTableView.rowHeight = 350;
         
         // Network request
         let url = URL(string: "https://api.tumblr.com/v2/blog/humansofnewyork.tumblr.com/posts/photo?api_key=Q6vHoaVm5L1u2ZAW1fqv3Jw48gFzYVg9P0vH0VHl3GVy6quoGV")!
@@ -42,8 +44,8 @@ class PhotosViewController: UIViewController, UITableViewDataSource, UITableView
                 // Store the returned array of dictionaries in our posts property
                 self.posts = responseDictionary["posts"] as! [[String: Any]];
                 
-                // TODO: Reload the table view
-                
+                // Reload the table view
+                self.tumblrTableView.reloadData();
             }
             
         }
@@ -56,6 +58,28 @@ class PhotosViewController: UIViewController, UITableViewDataSource, UITableView
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        let cell = tableView.dequeueReusableCell(withIdentifier: "tumblrPhotoCell", for: indexPath) as! tumblrTableViewCell;
+        
+        let post = posts[indexPath.row];  //pull out single post from posts array
+        
+        //get photo dictionary from the post
+        
+        if let photos = post["photos"] as? [[String: Any]]{
+            //to get images url:
+            let photo = photos[0]; //1st image in photos array
+            
+            let originalSize = photo["original_size"] as! [String: Any]; //Get the original size dictionary from the photo
+            
+            // Get the url string from the original size dictionary
+            let urlString = originalSize["url"] as! String;
+            
+            // Create a URL using the urlString
+            let url = URL(string: urlString);
+            
+            cell.tumblrImageView.af_setImage(withURL: url!);
+        }
+        
+        return cell;
     }
 
     override func didReceiveMemoryWarning() {

@@ -14,6 +14,7 @@
 		19A3BEB61FBFDF00005F5202 /* tumblrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A3BEB51FBFDF00005F5202 /* tumblrTests.swift */; };
 		19A3BEC11FBFDF00005F5202 /* tumblrUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A3BEC01FBFDF00005F5202 /* tumblrUITests.swift */; };
 		19A3BECF1FBFE6E5005F5202 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A3BECE1FBFE6E5005F5202 /* PhotosViewController.swift */; };
+		19A3BED51FBFF0B5005F5202 /* tumblrTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A3BED41FBFF0B5005F5202 /* tumblrTableViewCell.swift */; };
 		A2FAB7189799EDB430DA39FB /* Pods_tumblrUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB5690A15F8A79C3F5BD17D7 /* Pods_tumblrUITests.framework */; };
 		CA763A59998EE770302B1C20 /* Pods_tumblr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F07F57A4064E9805610BC85 /* Pods_tumblr.framework */; };
 		F988234DF5301E201CC60C82 /* Pods_tumblrTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 658D2B087D7ED4AE1763B899 /* Pods_tumblrTests.framework */; };
@@ -50,6 +51,7 @@
 		19A3BEC01FBFDF00005F5202 /* tumblrUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tumblrUITests.swift; sourceTree = "<group>"; };
 		19A3BEC21FBFDF00005F5202 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19A3BECE1FBFE6E5005F5202 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
+		19A3BED41FBFF0B5005F5202 /* tumblrTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tumblrTableViewCell.swift; sourceTree = "<group>"; };
 		2399A011E3F58E8B9EEDCBC0 /* Pods-tumblrTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tumblrTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tumblrTests/Pods-tumblrTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2A93DFA4517F29D857E36915 /* Pods-tumblrUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tumblrUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-tumblrUITests/Pods-tumblrUITests.release.xcconfig"; sourceTree = "<group>"; };
 		658D2B087D7ED4AE1763B899 /* Pods_tumblrTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tumblrTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,6 +122,7 @@
 				19A3BEA71FBFDF00005F5202 /* Assets.xcassets */,
 				19A3BEA91FBFDF00005F5202 /* LaunchScreen.storyboard */,
 				19A3BEAC1FBFDF00005F5202 /* Info.plist */,
+				19A3BED41FBFF0B5005F5202 /* tumblrTableViewCell.swift */,
 			);
 			path = tumblr;
 			sourceTree = "<group>";
@@ -396,14 +399,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-tumblr/Pods-tumblr-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/OAuthSwift/OAuthSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/OAuthSwiftAlamofire/OAuthSwiftAlamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OAuthSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OAuthSwiftAlamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -463,6 +464,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				19A3BEA11FBFDF00005F5202 /* AppDelegate.swift in Sources */,
+				19A3BED51FBFF0B5005F5202 /* tumblrTableViewCell.swift in Sources */,
 				19A3BECF1FBFE6E5005F5202 /* PhotosViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
