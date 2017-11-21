@@ -21,7 +21,7 @@ class PhotosViewController: UIViewController, UITableViewDataSource, UITableView
         
         tumblrTableView.delegate = self;
         tumblrTableView.dataSource = self;
-        tumblrTableView.rowHeight = 350;
+        tumblrTableView.rowHeight = 250.0;
         
         // Network request
         let url = URL(string: "https://api.tumblr.com/v2/blog/humansofnewyork.tumblr.com/posts/photo?api_key=Q6vHoaVm5L1u2ZAW1fqv3Jw48gFzYVg9P0vH0VHl3GVy6quoGV")!
